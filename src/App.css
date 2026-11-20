@@ -1,0 +1,531 @@
+/* 전체 */
+.app {
+  min-height: 100vh;
+  background: #f3f5f7;
+  color: #26384b;
+  transition: 0.3s;
+}
+
+/* 상단 네비게이션 */
+.navbar {
+  height: 65px;
+  background: white;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #243b53;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-menu button {
+  border: none;
+  background: transparent;
+  color: #888;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-menu button:hover,
+.nav-menu button.nav-active {
+  color: #1976d2;
+  background: #f1f5f9;
+  font-weight: bold;
+}
+
+.nav-menu button span {
+  margin-right: 7px;
+}
+
+.theme-button {
+  border: 1px solid #e5e5e5;
+  border-radius: 25px;
+  padding: 8px 18px;
+  background: #f7f7f7;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* HOME */
+.home-container {
+  padding: 38px 2%;
+}
+
+.welcome-box {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 18px;
+  padding: 36px;
+  margin-bottom: 28px;
+}
+
+.welcome-box h1 {
+  color: #1976d2;
+  font-size: 29px;
+  margin: 0 0 10px;
+}
+
+.welcome-box p {
+  color: #999;
+  font-size: 14px;
+  margin: 0;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.project-card {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 17px;
+  height: 185px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+}
+
+.project-icon {
+  color: #1976d2;
+  font-size: 43px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.project-card h3 {
+  font-size: 17px;
+  margin: 0 0 14px;
+}
+
+.project-card p {
+  color: #aaa;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* TODO */
+.todo-container {
+  width: 310px;
+  margin: 38px auto;
+}
+
+.todo-container h2 {
+  color: #1976d2;
+  font-size: 25px;
+  margin-bottom: 18px;
+}
+
+.todo-input-box {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 15px;
+  padding: 18px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.todo-input-box input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  background: #f3f5f7;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.todo-input-box button {
+  width: 50px;
+  border: none;
+  border-radius: 9px;
+  background: #1976d2;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-item {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.todo-check {
+  color: #80b58b;
+  font-size: 21px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.todo-check.completed {
+  color: #1976d2;
+}
+
+.todo-text {
+  flex: 1;
+  font-size: 14px;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+.line-through {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.delete-button {
+  background: transparent;
+  border: none;
+  color: #e87979;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+/* COIN */
+.coin-container {
+  display: grid;
+  grid-template-columns: 375px minmax(0, 1fr);
+  gap: 20px;
+  padding: 38px 1.7%;
+  height: calc(100vh - 65px);
+  min-height: 550px;
+}
+
+.coin-sidebar {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 17px;
+  overflow-y: auto;
+}
+
+.coin-sidebar h3 {
+  font-size: 17px;
+  padding: 20px;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.coin-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 20px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: 0.2s;
+  gap: 8px;
+}
+
+.coin-list-item:hover,
+.coin-list-item.active {
+  background: #f0f6fc;
+}
+
+.coin-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.coin-name img {
+  width: 27px;
+  height: 27px;
+}
+
+.coin-name div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.coin-name strong {
+  font-size: 13px;
+}
+
+.coin-name small {
+  color: #999;
+  font-size: 11px;
+}
+
+.coin-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.coin-price strong {
+  font-size: 13px;
+}
+
+.coin-price small {
+  font-size: 11px;
+}
+
+.up {
+  color: #19964a;
+}
+
+.down {
+  color: #e33b3b;
+}
+
+.coin-detail {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 17px;
+  padding: 38px;
+  overflow-y: auto;
+}
+
+.coin-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.coin-title img {
+  width: 38px;
+  height: 38px;
+}
+
+.coin-title h1 {
+  color: #1976d2;
+  font-size: 28px;
+  margin: 0;
+}
+
+.coin-title span {
+  color: #999;
+}
+
+.coin-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.coin-info {
+  background: #f2f4f6;
+  border-radius: 13px;
+  padding: 20px;
+  min-width: 0;
+}
+
+.coin-info p {
+  color: #999;
+  font-size: 13px;
+  margin: 0 0 10px;
+}
+
+.coin-info h2 {
+  font-size: clamp(15px, 1.4vw, 22px);
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.coin-extra {
+  margin-top: 30px;
+  color: #777;
+  font-size: 14px;
+}
+
+.coin-message {
+  padding: 20px;
+  color: #888;
+}
+
+/* 다크 모드 */
+.app.dark {
+  background: #18212c;
+  color: #e8edf3;
+}
+
+.dark .navbar,
+.dark .welcome-box,
+.dark .project-card,
+.dark .todo-input-box,
+.dark .todo-item,
+.dark .coin-sidebar,
+.dark .coin-detail {
+  background: #253242;
+  border-color: #39485a;
+  color: #e8edf3;
+}
+
+.dark .logo {
+  color: white;
+}
+
+.dark .nav-menu button {
+  color: #bdc8d4;
+}
+
+.dark .nav-menu button.nav-active,
+.dark .nav-menu button:hover {
+  color: #65aaff;
+  background: #34465c;
+}
+
+.dark .theme-button {
+  background: #34465c;
+  color: white;
+  border-color: #46576b;
+}
+
+.dark .todo-input-box input,
+.dark .coin-info {
+  background: #344356;
+  color: white;
+  border-color: #46576b;
+}
+
+.dark .coin-list-item:hover,
+.dark .coin-list-item.active {
+  background: #34465c;
+}
+
+.dark .coin-title,
+.dark .coin-sidebar h3,
+.dark .coin-list-item {
+  border-color: #39485a;
+}
+
+/* 반응형 */
+@media (max-width: 900px) {
+  .coin-container {
+    grid-template-columns: 280px minmax(0, 1fr);
+  }
+
+  .coin-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    height: auto;
+    min-height: 65px;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .nav-menu {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-menu button {
+    padding: 9px 12px;
+  }
+
+  .home-container {
+    padding: 20px 4%;
+  }
+
+  .welcome-box {
+    padding: 24px;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-card {
+    height: 160px;
+  }
+
+  .coin-container {
+    height: auto;
+    grid-template-columns: 1fr;
+    padding: 20px 4%;
+  }
+
+  .coin-sidebar {
+    max-height: 350px;
+  }
+
+  .coin-detail {
+    padding: 20px;
+    min-height: 280px;
+  }
+
+  .coin-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 상단 메뉴 아이콘 */
+.nav-menu button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #999;
+  background: transparent;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 9px;
+  font-size: 15px;
+}
+
+/* 선택된 메뉴 */
+.nav-menu button.nav-active {
+  color: #1976d2;
+  background: #f1f5f9;
+  font-weight: bold;
+}
+
+/* 메인 카드 아이콘 */
+.project-icon {
+  color: #1976d2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
